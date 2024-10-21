@@ -23,11 +23,21 @@
                      <h1 class="heading-tag">Darcey Mckelvey</h1>
                 </div>
 
-                <nav class="primary-navigation" aria-label="Main Navigation">
+                <!-- sr-only screen reader context -->
+                <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false"><span class="sr-only">Menu</span></button>
+
+                <nav id="primary-navigation" aria-label="Main Navigation">
                     <ul class="nav-list flex-group" role="menubar">
-                        <li><a aria-current="page" class="nav-link" role="menuitem" href="#">about me</a></li>
-                        <li><a class="nav-link" role="menuitem" href="#">blog</a></li>
-                        <li><a class="nav-link" role="menuitem"  href="#">projects</a></li>
+                        <li><a aria-current="page" class="nav-link" role="menuitem" href="#">
+                            <!-- aria hidden makes it so screen readers wont read 00 out loud -->
+                            <span aria-hidden="true">00</span> about me
+                        </a></li>
+                        <li><a class="nav-link" role="menuitem" href="#">
+                            <span aria-hidden="true">01</span> blog
+                        </a></li>
+                        <li><a class="nav-link" role="menuitem"  href="#">
+                             <span aria-hidden="true">02</span> projects
+                        </a></li>
                     </ul>
                 </nav>
             </aside>
